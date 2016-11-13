@@ -3,6 +3,10 @@ package jco2641.pmi.proxy;
 import jco2641.pmi.Config;
 import jco2641.pmi.ModItems;
 import jco2641.pmi.ModRecipes;
+import jco2641.pmi.handler.LivingDropsHandler;
+import jco2641.pmi.handler.LootHandler;
+import net.minecraftforge.common.DungeonHooks;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -30,5 +34,7 @@ public class CommonProxy {
         if (config.hasChanged()){
             config.save();
         }
+        MinecraftForge.EVENT_BUS.register(new LivingDropsHandler());
+        MinecraftForge.EVENT_BUS.register(new LootHandler());
     }
 }
