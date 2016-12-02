@@ -225,5 +225,15 @@ public class ModRecipes {
                     'D',Blocks.DIAMOND_BLOCK
             );
         }
+
+        //1 Flint + 1 Fish + 1 Lapis -> 8 Prismarine shard
+        if(Config.prismarine){
+            final int BLUE_DYE_DMG = EnumDyeColor.BLUE.getDyeDamage();
+            GameRegistry.addShapelessRecipe(new ItemStack(Items.PRISMARINE_SHARD,8),
+                    new ItemStack(Items.FISH),
+                    new ItemStack(Items.FLINT),
+                    new ItemStack(Items.DYE,1,BLUE_DYE_DMG)
+            );
+        }
     }
 }

@@ -28,6 +28,7 @@ public class Config {
     public static boolean ender_pearl       = true;
     public static boolean end_stone         = true;
     public static boolean nether_star       = true;
+    public static boolean prismarine        = true;
 
     public static void readConfig(){
         Configuration cfg = CommonProxy.config;
@@ -66,6 +67,7 @@ public class Config {
         ender_pearl =       cfg.getBoolean("ender_pearl",   CATEGORY_RECIPES,true,"Enable Ender Pearl recipe");
         end_stone =         cfg.getBoolean("end_stone",     CATEGORY_RECIPES,true,"Enable End Stone recipe");
         nether_star =       cfg.getBoolean("nether_star",   CATEGORY_RECIPES,true,"Enable Nether Star recipe");
+        prismarine =        cfg.getBoolean("prismarine",    CATEGORY_RECIPES,true,"Enable Prismarine shard recipe");
     }
 
 }
